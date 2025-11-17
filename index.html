@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La French · Sticker Mystère</title>
+  <title>La French · Mystery Hunt</title>
 
   <!-- Meta description -->
-  <meta name="description" content="Tu as trouvé le Sticker Mystère de La French ? Découvre comment récupérer 1 g de fleur bien-être offert (offre réservée aux 50 premiers). Adresse, règles et mentions légales." />
+  <meta name="description" content="Tu as trouvé l’aimant mystère de La French ? Découvre comment récupérer 1 g de fleur bien-être offert. Adresse, règles et fonctionnement de la chasse au trésor urbaine à Tours." />
 
   <!-- Open Graph for social share -->
-  <meta property="og:title" content="La French · Sticker Mystère" />
-  <meta property="og:description" content="Félicitations ! 1 g de fleur bien-être offert pour les 50 premiers découvreurs. Scanne, poste en story Instagram et passe à la boutique." />
+  <meta property="og:title" content="La French · Mystery Hunt" />
+  <meta property="og:description" content="Félicitations ! Trouve l’aimant La French, poste ta découverte en story et viens en boutique récupérer 1 g de fleur bien-être offert." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="" />
   <meta property="og:url" content="" />
@@ -27,7 +27,13 @@
       --muted:#6b7280;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:var(--paper);color:var(--ink);}
+    html,body{
+      margin:0;
+      padding:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+      background:var(--paper);
+      color:var(--ink);
+    }
     .wrap{max-width:880px;margin:0 auto;padding:24px}
     header{
       position:relative;
@@ -51,55 +57,153 @@
       letter-spacing:.3px;
       margin-bottom:10px;
     }
-    h1{font-size:clamp(28px,4vw,40px);margin:6px 0 10px 0;line-height:1.1;color:#fff}
-    .subtitle{font-size:clamp(16px,2.6vw,19px);opacity:.95;margin:0 0 8px 0;color:#fff}
-    .cta-bar{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    h1{
+      font-size:clamp(28px,4vw,40px);
+      margin:6px 0 10px 0;
+      line-height:1.1;
+      color:#fff
+    }
+    .subtitle{
+      font-size:clamp(16px,2.6vw,19px);
+      opacity:.95;
+      margin:0 0 8px 0;
+      color:#fff
+    }
+    .cta-bar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:14px
+    }
     .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:600;
-      transition:.2s ease; border:1px solid rgba(255,255,255,.2)
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.2s ease;
+      border:1px solid rgba(255,255,255,.2)
     }
     .btn.primary{background:var(--gold);color:#1d1a12;border-color:#d9c291}
     .btn.secondary{background:rgba(255,255,255,.08);color:#fff}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
-    section{background:white;border-radius:18px;padding:20px;margin-top:20px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
-    section h2{margin:4px 0 12px 0;font-size:22px;color:var(--bordeaux)}
-    ul.steps{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-    ul.steps li{background:#fafafa;border:1px solid #eee;border-radius:14px;padding:14px 14px;display:flex;gap:10px;align-items:flex-start}
-    .num{min-width:32px;height:32px;border-radius:10px;background:var(--bordeaux);color:#fff;display:grid;place-items:center;font-weight:700}
-    .info{font-size:14.5px;color:#111;line-height:1.55}
-    .note{font-size:13.5px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:760px){ .grid{grid-template-columns:1.2fr .8fr} }
-    .card{background:#fff;border:1px solid #eee;border-radius:14px;padding:14px}
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 8px 22px rgba(0,0,0,.18)
+    }
+    section{
+      background:white;
+      border-radius:18px;
+      padding:20px;
+      margin-top:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.05)
+    }
+    section h2{
+      margin:4px 0 12px 0;
+      font-size:22px;
+      color:var(--bordeaux)
+    }
+    ul.steps{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:12px
+    }
+    ul.steps li{
+      background:#fafafa;
+      border:1px solid #eee;
+      border-radius:14px;
+      padding:14px 14px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start
+    }
+    .num{
+      min-width:32px;
+      height:32px;
+      border-radius:10px;
+      background:var(--bordeaux);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-weight:700
+    }
+    .info{
+      font-size:14.5px;
+      color:#111;
+      line-height:1.55
+    }
+    .note{
+      font-size:13.5px;
+      color:var(--muted)
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px
+    }
+    @media(min-width:760px){
+      .grid{grid-template-columns:1.2fr .8fr}
+    }
+    .card{
+      background:#fff;
+      border:1px solid #eee;
+      border-radius:14px;
+      padding:14px
+    }
     .address{font-weight:700}
     .rules li{margin:6px 0}
-    footer{color:#444;font-size:13.5px;margin:24px 0 8px 0}
+    footer{
+      color:#444;
+      font-size:13.5px;
+      margin:24px 0 8px 0
+    }
     .legal p{margin:6px 0}
-    .small{font-size:12.5px;color:#666}
-    .tag{display:inline-block;background:#f1ede7;border:1px dashed #dbc6a0;color:#5a4830;padding:4px 8px;border-radius:999px;font-size:12.5px}
-    .sep{height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.07),transparent);margin:14px 0}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+    .small{
+      font-size:12.5px;
+      color:#666
+    }
+    .tag{
+      display:inline-block;
+      background:#f1ede7;
+      border:1px dashed #dbc6a0;
+      color:#5a4830;
+      padding:4px 8px;
+      border-radius:999px;
+      font-size:12.5px
+    }
+    .sep{
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(0,0,0,.07),transparent);
+      margin:14px 0
+    }
+    .mono{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-     <div style="text-align:center; margin-bottom:25px;">
-  <img 
-    src="logo-lafrench.png" 
-    alt="La French – Chanvre & CBD" 
-    style="
-      max-width:280px;
-      height:auto;
-      display:inline-block;
-      filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.25));
-    "
-  >
-</div>
-      <span class="badge">Sticker Mystère · La French</span>
+      <div style="text-align:center; margin-bottom:25px;">
+        <img 
+          src="logo-lafrench.png" 
+          alt="La French – Chanvre & CBD" 
+          style="
+            max-width:280px;
+            height:auto;
+            display:inline-block;
+            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.25));
+          "
+        >
+      </div>
+      <span class="badge">Mystery Hunt · La French</span>
       <h1>Bravo 👀 Tu as l’œil&nbsp;!</h1>
-      <p class="subtitle">1 g de fleur bien‑être offert pour les <strong>50 premiers découvreurs</strong>. Poste ta découverte et passe en boutique.</p>
+      <p class="subtitle">
+        1 g de fleur bien-être offert. Trouve l’aimant, poste ta découverte et passe en boutique.
+      </p>
       <div class="cta-bar">
         <a class="btn primary" href="https://maps.google.com/?q=60+Rue+Bernard+Palissy,+37000+Tours" target="_blank" rel="noopener">📍 Nous trouver</a>
         <a class="btn secondary" href="https://instagram.com/cbd.tours.lafrench" target="_blank" rel="noopener">📲 @cbd.tours.lafrench</a>
@@ -109,11 +213,30 @@
     <section>
       <h2>🎁 Comment récupérer ton lot</h2>
       <ul class="steps">
-        <li><span class="num">1</span><div class="info"><strong>Prends une photo ou vidéo</strong> du sticker trouvé (laisse‑le sur place 😉).</div></li>
-        <li><span class="num">2</span><div class="info"><strong>Publie ta découverte en story Instagram</strong> en identifiant <span class="mono">@cbd.tours.lafrench</span> et avec le hashtag <span class="mono">#LaFrenchMystery</span>.</div></li>
-        <li><span class="num">3</span><div class="info"><strong>Viens en boutique</strong> et montre la story pour récupérer ton gramme 🌿.</div></li>
+        <li>
+          <span class="num">1</span>
+          <div class="info">
+            <strong>Repère l’aimant La French</strong> en ville et prends une photo ou une vidéo au moment où tu le trouves.
+          </div>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <div class="info">
+            <strong>Publie ta découverte en story Instagram</strong> en identifiant 
+            <span class="mono">@cbd.tours.lafrench</span> et avec le hashtag 
+            <span class="mono">#LaFrenchMystery</span>.
+          </div>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <div class="info">
+            <strong>Ramène l’aimant en boutique</strong> et montre ta story pour récupérer ton gramme 🌿.
+          </div>
+        </li>
       </ul>
-      <p class="note">Offre réservée aux 50 premiers · Réservé aux majeurs · Une seule participation par personne · Sans obligation d'achat.</p>
+      <p class="note">
+        Réservé aux majeurs · Une seule dotation par personne et par jour · Sans obligation d'achat.
+      </p>
     </section>
 
     <section class="grid">
@@ -121,46 +244,84 @@
         <h2>📍 La French – CBD Shop</h2>
         <p class="address">60 Rue Bernard Palissy, 37000 Tours</p>
         <p>Du lundi au samedi · 10h → 19h</p>
-        <p><a class="tag" href="https://maps.google.com/?q=60+Rue+Bernard+Palissy,+37000+Tours" target="_blank" rel="noopener">Voir sur Google Maps</a></p>
+        <p>
+          <a class="tag" href="https://maps.google.com/?q=60+Rue+Bernard+Palissy,+37000+Tours" target="_blank" rel="noopener">
+            Voir sur Google Maps
+          </a>
+        </p>
       </div>
       <div class="card">
         <h2>📸 Bonus viral</h2>
-        <p>Les meilleures photos seront repartagées en story. Sois créatif, surprends‑nous et fais vivre l’esprit <em>La French City Hunt</em> ✨</p>
+        <p>
+          Les meilleures photos seront repartagées en story. 
+          Sois créatif, surprends-nous et fais vivre l’esprit 
+          <em>La French City Hunt</em> ✨
+        </p>
       </div>
     </section>
 
     <section>
       <h2>📜 Règlement & Mentions légales</h2>
-  <div class="sep"></div>
-  <div class="legal">
+      <div class="sep"></div>
+      <div class="legal">
         <p><strong>Organisateur :</strong><br>
-          SASU LA FRENCH – 60 Rue Bernard Palissy, 37000 Tours – SIREN <span class="mono">95324056100027</span>.</p>
+          SASU LA FRENCH – 60 Rue Bernard Palissy, 37000 Tours – SIREN 
+          <span class="mono">95324056100027</span>.
+        </p>
+
         <p><strong>Objet du jeu :</strong><br>
-          Jeu gratuit sans obligation d’achat « Sticker Mystère La French », consistant à découvrir un autocollant en ville de Tours et à partager une publication sur Instagram pour obtenir un échantillon offert.</p>
+          Jeu gratuit sans obligation d’achat « La French Mystery Hunt », consistant à trouver un aimant La French dissimulé dans la ville de Tours, puis à le ramener en boutique pour obtenir une dotation.
+        </p>
+
         <p><strong>Durée :</strong><br>
-          À compter du <span class="mono">1er décembre 2025</span> et jusqu’à épuisement des 50 lots.</p>
+          À compter du <span class="mono">1er décembre 2025</span> et jusqu’à cessation du jeu par l’organisateur.
+        </p>
+
         <p><strong>Conditions de participation :</strong></p>
         <ul class="rules">
           <li>Être âgé d’au moins 18 ans.</li>
-          <li>Disposer d’un compte Instagram <em>public</em> au moment du partage.</li>
-          <li>Publier une photo/vidéo du sticker en identifiant <span class="mono">@cbd.tours.lafrench</span> et avec le hashtag <span class="mono">#LaFrenchMystery</span>.</li>
-          <li>Se présenter en boutique avec la publication visible pour retrait du lot.</li>
-          <li>Une seule dotation par personne (même nom, même compte, même pièce d’identité).</li>
+          <li>Disposer d’un compte Instagram public au moment du partage.</li>
+          <li>Prendre une photo ou vidéo du moment où l’aimant est trouvé.</li>
+          <li>Publier cette photo/vidéo en story Instagram en identifiant 
+            <span class="mono">@cbd.tours.lafrench</span>.
+          </li>
+          <li><strong>Ramener physiquement l’aimant en boutique</strong> pour valider la participation.</li>
+          <li>Une seule dotation par personne et par jour.</li>
         </ul>
+
         <p><strong>Dotation :</strong><br>
-          1 g de fleur bien-être. Lot non monnayable, non échangeable, dans la limite des stocks.</p>
+          1 g de fleur bien-être offert. Lot non échangeable et non monnayable.
+          Une fois remis en boutique, l’aimant peut être replacé par nos soins pour permettre la poursuite du jeu.
+        </p>
+
         <p><strong>Responsabilité :</strong><br>
-          L’organisateur se réserve le droit de modifier, écourter, prolonger ou annuler le jeu en cas de force majeure, fraude ou tout événement indépendant de sa volonté.</p>
+          L’organisateur se réserve le droit de modifier, déplacer, suspendre ou arrêter le jeu à tout moment en cas de fraude, d’abus, de dégradations ou d’événements indépendants de sa volonté.
+        </p>
+
         <p><strong>Données personnelles :</strong><br>
-          Aucune donnée nominative n’est collectée via ce site. Les publications sont régies par les conditions d’utilisation d’Instagram. En boutique, une vérification de majorité peut être effectuée.</p>
+          Aucune donnée nominative n’est collectée via ce site. 
+          Les publications Instagram sont régies par les conditions de la plateforme. 
+          Une vérification de majorité peut être effectuée en boutique.
+        </p>
+
         <p><strong>Propriété intellectuelle :</strong><br>
-          Marque, logo et visuels « La French » © SASU LA FRENCH. Toute reproduction est interdite.</p>
-        <p><strong>Contact :</strong> <a href="mailto:lafrenchtours@gmail.com">lafrenchtours@gmail.com</a></p>
+          Marque, logo et visuels « La French » © SASU LA FRENCH. 
+          Toute reproduction est interdite.
+        </p>
+
+        <p><strong>Contact :</strong> 
+          <a href="mailto:lafrenchtours@gmail.com">lafrenchtours@gmail.com</a>
+        </p>
       </div>
     </section>
 
     <footer>
-      <div class="small">© <span id="year"></span> La French – Tous droits réservés · <a href="https://instagram.com/cbd.tours.lafrench" target="_blank" rel="noopener">@cbd.tours.lafrench</a></div>
+      <div class="small">
+        © <span id="year"></span> La French – Tous droits réservés · 
+        <a href="https://instagram.com/cbd.tours.lafrench" target="_blank" rel="noopener">
+          @cbd.tours.lafrench
+        </a>
+      </div>
     </footer>
   </div>
 
